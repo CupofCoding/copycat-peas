@@ -1,0 +1,398 @@
+/*NavBar*/
+.navbar {
+  width: 100%;
+  height: 75px;
+  background: linear-gradient(
+    rgba(255, 255, 255),
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.5)
+  );
+  opacity: 0.95;
+  padding: 10px;
+  /*Line Shadow under Navbar*/
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
+    0 0 2px rgb(0 0 0 / 7%);
+  position: fixed;
+  z-index: 900;
+}
+
+.navbar-container {
+  display: flex; /*Puts it in a line*/
+  justify-content: space-between; /*divides items evenly*/
+  align-items: center; /*Centers the links to logo*/
+  text-decoration: none;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: var(--default-text);
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: var(--default-text);
+}
+
+.navbar-logo img {
+  margin-left: 0.25em;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-shadow: 0px 4px 12px gray;
+  border-radius: 100%;
+  opacity: 1;
+}
+
+.navbar-left {
+  text-transform: uppercase;
+  flex: right;
+  margin-right: auto;
+}
+
+.navbar-right li:first-child a {
+  display: flex;
+  align-items: right;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.navbar-right img {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.navbar-right li {
+  text-decoration: none;
+  margin-right: auto;
+}
+
+/* to reference the list items  */
+.navbar-right li:nth-child(2) {
+  margin: 0 5px;
+}
+
+/* Drop Down Menu */
+.header {
+  background-color: none;
+  display: flex;
+  align-items: baseline;
+  padding: 0;
+  text-transform: uppercase;
+  flex: center;
+  margin: 0;
+  margin-right: 1em;
+}
+
+.link {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 0.25em 0 3.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: var(--background-primary);
+  position: relative;
+}
+
+.contact-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 75%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in;
+}
+
+.contact-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.arrow {
+  margin: 0;
+  padding: 0;
+}
+
+/* any link that is in direct focus */
+.drop-down.active > .link,
+.link:hover {
+  color: black;
+}
+
+.drop-down {
+  position: relative;
+  text-align: left;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+.drop-down-menu {
+  transform: translateX(-50%);
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  left: 5em;
+  width: 95vw;
+  max-height: 100vh;
+  top: calc(4em + 0.75rem);
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+}
+
+.submit-button {
+  width: 10em;
+  margin-top: 0.5em;
+  margin-bottom: 0.75em;
+}
+
+/* select class then select the child from that class when we focus on the link and select class that's sibling  */
+.drop-down.active > .link + .drop-down-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.drop-down-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-form {
+  position: relative;
+  background-color: white;
+  width: 80vw;
+  padding-top: 2em;
+}
+
+.contact-form > input {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.message-field {
+  height: 20em;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+/* Hamburger/Menu Icon */
+.corner-menu {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: sticky;
+  background: none;
+  border: none;
+  z-index: 1000; /*always on top*/
+  display: none;
+}
+
+.corner-menu-top,
+.corner-menu-middle,
+.corner-menu-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.corner-menu-middle {
+  transform: translateY(7px);
+}
+
+.corner-menu-bottom {
+  transform: translateY(14px);
+}
+
+.open .corner-menu-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .corner-menu-middle {
+  display: none;
+}
+.open .corner-menu-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+/* Mobile Menu */
+.hidden {
+  transform: translateX(100%); /*moves it from the right*/
+}
+
+/* Caps the Navigation Bar
+    .no-scroll {
+      overflow: hidden;
+    } */
+
+.mobile-menu {
+  position: fixed;
+  top: 75px;
+  right: 0;
+  width: 50%;
+  height: 18em;
+  background-color: #fff;
+  color: #000;
+  padding: 3em;
+  box-shadow: inset 0 4px 3px -3px rgb(0 0 0 / 10%),
+    inset 0 4px 2px -2px rgb(0 0 0 / 7%);
+  transition: all 0.3s;
+  z-index: 1000;
+  border-radius: 0 0 0 0.5em;
+}
+
+.mobile-menu ul {
+  line-height: 3;
+  border-bottom: #7777 solid 1px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.mobile-menu a:hover {
+  color: var(--default-text);
+}
+
+.mobile-menu div {
+  margin-top: 20px;
+}
+
+.mobile-menu div a {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.mobile-menu img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/*Contact Mobile */
+#menu > ul > div > li:nth-child(4) > div {
+  position: absolute;
+  left: 0;
+  margin-right: auto;
+  padding-left: 3em;
+}
+
+#menu > ul > div > li:nth-child(4) > div > button {
+  margin-left: 0;
+}
+
+.contact-form-mobile {
+  position: fixed;
+  width: 100vw;
+  height: 85vh;
+  left: 0;
+  margin-top: 0px;
+}
+
+@media (max-width: 375px) {
+  .mobile-menu {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-logo {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 0.25em;
+  }
+
+  .navbar .navbar-right,
+  .navbar .navbar-left {
+    display: none;
+  }
+
+  .corner-menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-form-mobile {
+    top: 3.5em;
+  }
+
+  .message-field {
+    height: 10em;
+  }
+}
+
+@media (max-width: 960px) {
+}
+
+@media (min-width: 1440px) {
+}
