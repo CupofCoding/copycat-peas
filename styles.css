@@ -133,7 +133,6 @@ html {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  max-height: 800vh;
   overflow: none;
   margin-left: auto;
   margin-right: auto;
@@ -278,6 +277,7 @@ button {
   background: none;
   border: transparent;
   border-radius: 50px;
+  border-color: 1px transparent solid;
   color: var(--text-color);
   line-height: 12px;
   opacity: 0.8;

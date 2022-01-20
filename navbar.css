@@ -18,23 +18,14 @@
 
 #navbar {
   display: flex; /*Puts it in a line*/
-  justify-content: space-between; /*divides items evenly*/
+  justify-content: space-between;
   align-items: center; /*Centers the links to logo*/
   position: inherit;
   margin: 0;
   padding: 0;
   text-decoration: none;
   width: 996px;
-}
-
-.navbar ul {
-  display: flex;
-  align-items: center;
-}
-
-.navbar li {
-  margin: 0 15px;
-  text-decoration: none;
+  max-width: 95vw;
 }
 
 .navbar a {
@@ -110,6 +101,7 @@
   float: right;
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 .drop-down-menu {
@@ -161,12 +153,13 @@
   justify-content: center;
   width: 200vw;
   max-height: 100vh;
-  z-index: 1;
+  z-index: 5000;
   left: -120vw;
+  overflow: hidden;
 }
 
 #search-bar input {
-  width: 50vw;
+  width: 40vw;
   max-width: 995px;
 }
 
@@ -183,45 +176,10 @@
   pointer-events: auto;
 }
 
-.information-grid {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 2rem;
-  padding-top: 20%;
-  padding-bottom: 20%;
-}
-
 .drop-down-links {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-}
-
-.contact-form {
-  position: relative;
-  background-color: white;
-  width: 80vw;
-  padding-top: 2em;
-}
-
-.contact-form > input {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-.message-field {
-  height: 20em;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding-right: 0;
-  margin-right: 0;
 }
 
 /* Hamburger/Menu Icon */
@@ -237,32 +195,25 @@
 }
 
 .corner-menu-top,
-.corner-menu-middle,
 .corner-menu-bottom {
   position: absolute;
-  top: 0;
+  top: 25%;
   left: 0;
-  width: 24px;
-  height: 2px;
-  background: #000;
+  width: 18px;
+  height: 1px;
+  background: var(--text-color);
   transform: rotate(0);
   transition: all 0.5s;
 }
 
-.corner-menu-middle {
-  transform: translateY(7px);
-}
-
 .corner-menu-bottom {
-  transform: translateY(14px);
+  transform: translateY(7px);
 }
 
 .open .corner-menu-top {
   transform: rotate(45deg) translateY(6px) translateX(6px);
 }
-.open .corner-menu-middle {
-  display: none;
-}
+
 .open .corner-menu-bottom {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
@@ -353,36 +304,49 @@
 }
 
 @media (max-width: 768px) {
-  .navbar-logo img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .navbar-logo {
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-top: 0.25em;
-  }
-
-  .navbar {
+  .nav-links {
     display: none;
   }
 
+  .peas-logo {
+    display: flex;
+    position: absolute;
+    right: calc(50% - 12.5px);
+    top: -0.25em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .drop-down-menu {
+    position: fixed;
+    left: 0;
+    width: 100vw;
+  }
+
+  .drop-down-links {
+    width: 80vw;
+  }
+
   .corner-menu {
+    top: 22px;
     display: flex;
     justify-content: center;
-  }
-
-  .contact-form-mobile {
-    top: 3.5em;
-  }
-
-  .message-field {
-    height: 10em;
+    align-items: center;
   }
 }
 
 @media (max-width: 960px) {
+  .offers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .offers-text {
+    max-width: 70%;
+    left: 0;
+  }
 }
 
 @media (min-width: 1440px) {
