@@ -25,6 +25,16 @@
   color: var(--chevy-link);
 }
 
+main .chevy a :not(sup),
+main .chevy button :not(sup) {
+  padding: 0 17.5px;
+}
+
+.chevy a,
+.chevy button:hover {
+  text-decoration: underline;
+}
+
 #stream-button {
   color: var(--text-color);
 }
