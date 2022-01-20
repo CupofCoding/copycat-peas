@@ -99,45 +99,8 @@
   text-decoration: none;
   color: none;
   font-family: inherit;
-  font-size: 17px;
   cursor: pointer;
   padding: 0;
-  margin: 0 0.25em 0 3.5em;
-}
-
-.contact-link {
-  text-decoration: none;
-  color: var(--background-primary);
-  position: relative;
-}
-
-.contact-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.2rem;
-  width: 75%;
-  height: 2px;
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 250ms ease-in;
-}
-
-.contact-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-.arrow {
-  margin: 0;
-  padding: 0;
-}
-
-/* any link that is in direct focus */
-.drop-down.active > .link,
-.link:hover {
-  color: black;
 }
 
 .drop-down {
@@ -149,30 +112,60 @@
 }
 
 .drop-down-menu {
-  transform: translateX(-50%);
-  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 45px;
+  left: -145px;
+  position: absolute;
+  transform: translateY(0px);
   align-items: center;
   justify-content: center;
-  left: 5em;
-  width: 95vw;
   max-height: 100vh;
-  top: calc(4em + 0.75rem);
   background-color: white;
-  padding: 0.75rem;
+  padding: 0 20px;
   border-radius: 0.25rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   opacity: 0;
   pointer-events: none;
-  transform: translateY(0px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
-.contact-me {
+.drop-down-header {
+  padding: 35px 0 23px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.drop-down-links {
+  width: 250px;
+}
+
+#drop-down-links a,
+#drop-down-links a::after,
+.drop-down-links a {
+  color: var(--chevy-link);
+  padding: 1em;
+  font-size: 14px;
+  line-height: 0.75em;
+  border-top: 1px gray solid;
+}
+
+#search-bar {
   display: flex;
-  flex-direction: column;
+  position: fixed;
+  top: -56px;
+  left: -65vw;
   align-items: center;
   justify-content: center;
+  width: 100vw;
   max-height: 100vh;
+  z-index: 1;
+}
+
+#search-bar input {
+  width: 50vw;
 }
 
 .submit-button {
