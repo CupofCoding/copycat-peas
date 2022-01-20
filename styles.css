@@ -222,7 +222,6 @@ button:hover {
 
 .text-xl {
   font-size: 50px;
-  text-transform: uppercase;
   letter-spacing: 1.5x;
   font-weight: 600;
   margin-bottom: 20px;
@@ -230,7 +229,6 @@ button:hover {
 
 .text-lg {
   font-size: 40px;
-  text-transform: uppercase;
   margin-bottom: 20px;
 }
 

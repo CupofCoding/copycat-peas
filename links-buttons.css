@@ -20,6 +20,15 @@
 }
 
 /*links*/
+.chevy a,
+.chevy button {
+  color: var(--chevy-link);
+}
+
+#stream-button {
+  color: var(--text-color);
+}
+
 .transform-link {
   text-decoration: none;
   color: var(--background-primary);
@@ -192,7 +201,6 @@
 
 .title-links {
   margin: 0 0 0.5em;
-  text-transform: uppercase;
   font-weight: 900;
   font-style: italic;
   font-size: 3rem;

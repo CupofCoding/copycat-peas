@@ -156,16 +156,17 @@
   display: flex;
   position: fixed;
   top: -56px;
-  left: -65vw;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 200vw;
   max-height: 100vh;
   z-index: 1;
+  left: -120vw;
 }
 
 #search-bar input {
   width: 50vw;
+  max-width: 995px;
 }
 
 .submit-button {
