@@ -46,6 +46,7 @@
 
 .navbar a:hover {
   opacity: 1;
+  text-decoration: none;
 }
 
 .navbar-logo svg {

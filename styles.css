@@ -79,6 +79,10 @@ a {
   color: var(--default-text);
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 ul {
   list-style: none;
 }
@@ -110,9 +114,16 @@ html {
   opacity: 0;
 }
 
+.offers {
+  background-color: #f5f5f7;
+}
+
 .offers .text-sm {
+  padding-top: 0px;
   font-size: 14px;
   text-align: center;
+  padding-bottom: 12px;
+  margin-bottom: 0;
 }
 
 /* Box */
@@ -121,13 +132,12 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
-
-  width: 100%;
+  width: 100vw;
   max-height: 800vh;
   overflow: none;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1em;
 }
 
 /* .box-padding {
@@ -145,11 +155,75 @@ html {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 80%;
-  height: 692px;
+  width: 100%;
   text-align: center;
   margin: 0 auto;
+  gap: 1em;
+}
+
+.product-main article {
+  height: 692px;
+  width: 100%;
   box-shadow: 4px 4px 6px black;
+}
+
+.product-main article > * {
+  position: relative;
+  top: 10%;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-main article button {
+  font-size: 21px;
+}
+
+.other-showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100vw;
+  max-height: 800vh;
+  overflow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-promos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  gap: 1em;
+}
+
+.product-promos article {
+  display: flex inline-block;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: center;
+  align-items: center;
+  max-width: calc(50vw - 0.5em);
+  min-width: 49%;
+  height: 624px;
+  width: calc(50%-0.5em);
+  box-shadow: 4px 4px 6px black;
+}
+
+.product-promos article > * {
+  position: relative;
+  top: 10%;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .box-text {
@@ -233,7 +307,7 @@ button:hover {
 }
 
 .text-med {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 20px;
 }
 

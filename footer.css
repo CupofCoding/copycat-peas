@@ -39,6 +39,14 @@ footer .text-sm,
   justify-content: center;
 }
 
+.shop-or-call a {
+  color: var(--chevy-link);
+}
+
+.shop-or-call a:hover {
+  text-decoration: underline;
+}
+
 .policy {
   display: flex;
 }
