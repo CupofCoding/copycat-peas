@@ -278,7 +278,7 @@ button {
   background: none;
   border: transparent;
   border-radius: 50px;
-  border-color: 1px transparent solid;
+  border: none;
   color: var(--text-color);
   line-height: 12px;
   opacity: 0.8;
