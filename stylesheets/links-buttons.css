@@ -23,13 +23,16 @@
 .chevy a,
 .chevy button {
   color: var(--chevy-link);
-  text-shadow: 1px 1px 20px black;
+}
+
+.chevy a :not(.offers a),
+.chevy button :not(.offers a) {
+  text-shadow: 2px 2px 20px black;
 }
 
 h1,
 h2 {
   text-shadow: 1px 1px 30px gray;
-  color-interpolation-filters: ;
   mix-blend-mode: multiply;
   background-color: white;
   color: black;
@@ -39,9 +42,10 @@ main .chevy a :not(sup),
 main .chevy button :not(sup),
 .chevy-2 {
   padding: 0 17.5px;
+  text-decoration: none;
 }
 
-.chevy a,
+.chevy a:hover,
 .chevy button:hover {
   text-decoration: underline;
 }
