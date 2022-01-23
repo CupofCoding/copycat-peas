@@ -282,9 +282,9 @@
 }
 
 /* Mobile Menu */ /*moves it from the top*/
-/* .hidden {
+.hidden {
   transform: translateY(calc(-100% - 44px));
-} */
+}
 
 /* Caps the Navigation Bar
     .no-scroll {
