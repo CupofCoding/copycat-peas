@@ -56,14 +56,8 @@
                 <div><a href="" class="nav-links">Support</a></div>
                 <div class="drop-down nav-links" data-drop-down>
                     <button class="link fas fa-search" data-drop-down-button> </button>
-                    <div class="drop-down-menu">
-                        <div class="navbar search-bar fas fa-search" id="search-bar">
-                            <form action="" class="">
-                                <label for="search-bar" class=""></label>
-                                <input type="text"> 
-                            </form>
-                        </div>
-                        <div>
+                    <div class="drop-down-menu search-menu">
+                        <div class="search-bar-drop-down" id="search-bar-drop-down">
                             <div class="drop-down-header">Quick Links</div>
                             <div class="drop-down-links">
                                 <a href="" class="">Visiting Store FAQ</a>
@@ -73,10 +67,16 @@
                                 <a href="" class="">Gift Cards</a>
                             </div>
                         </div>
+                        <div class="navbar search-bar " id="search-bar">
+                            <form action="" class="search-bar-large">
+                                <label for="search-bar" class="fas fa-search"></label>
+                                <input value="  Search peas.com" type="text"> 
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="drop-down" data-drop-down>
-                    <button class="link fas fa-shopping-bag" id="bag" data-drop-down-button></button>
+                    <button class="link fas fa-shopping-bag" id="bag" data-drop-down-button> </button>
                     <div class="drop-down-menu">
                         <div class="drop-down-header">Your bag is empty.</div>
                         <div class="drop-down-links" id="drop-down-links">
@@ -92,31 +92,30 @@
 
         </div>
     </nav>
-    <!-- <div class="mobile-menu hidden" id="menu">
+    <div class="mobile-menu hidden" id="menu">
         <ul class="mobile-nav-search">
-            <li>
-                <div class="mobile-search-bar" id="mobile-search-bar">
-                    <form action="" class="">
-                        <label for="search-bar" class="fas fa-search"></label>
-                        <input value=" Search peas.com" type="text">
-                    </form>
-                </div>
-            </li>
+            <div class="mobile-search-bar" id="mobile-search-bar">
+                <form action="" class="">
+                    <label for="search-bar" class="fas fa-search"></label>
+                    <input value=" Search peas.com" type="text">
+                </form>
+            </div>
         </ul>
         <ul class="mobile-nav-links-all">
-            <li><a href="" class="mobile-nav-links">Store</a></li>
-            <li><a href="" class="mobile-nav-links">pCs</a></li>
-            <li><a href="" class="mobile-nav-links">fieldP's</a></li>
-            <li><a href="" class="mobile-nav-links">snapP's</a></li>
-            <li><a href="" class="mobile-nav-links">splitP's</a></li>
-            <li><a href="" class="mobile-nav-links">pPods</a></li>
-            <li><a href="" class="mobile-nav-links">SweetP's</a></li>
-            <li><a href="" class="mobile-nav-links">GardenP's</a></li>
-            <li><a href="" class="mobile-nav-links">Accessories</a></li>
-            <li><a href="" class="mobile-nav-links">Support</a></li>
-            </ul>
-        </div>
-    </div>    -->
+            <div>
+                <li><a href="" class="mobile-nav-links">Store</a></li>
+                <li><a href="" class="mobile-nav-links">pCs</a></li>
+                <li><a href="" class="mobile-nav-links">fieldP's</a></li>
+                <li><a href="" class="mobile-nav-links">snapP's</a></li>
+                <li><a href="" class="mobile-nav-links">splitP's</a></li>
+                <li><a href="" class="mobile-nav-links">pPods</a></li>
+                <li><a href="" class="mobile-nav-links">SweetP's</a></li>
+                <li><a href="" class="mobile-nav-links">GardenP's</a></li>
+                <li><a href="" class="mobile-nav-links">Accessories</a></li>
+                <li><a href="" class="mobile-nav-links">Support</a></li>
+            </div>
+        </ul>
+    </div>   
     <div class="divider"></div>
     <section class="offers chevy">
       <h3 class="offers-text text-sm"><a href="" class="">Shop online</a> and get Specialist help, free delivery, and more. Some of our stores are offering limited services. Before you visit, please check your <a href="" class="">store's services.</a></h3>

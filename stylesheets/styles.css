@@ -351,25 +351,15 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-  .box-intro {
-    height: 100vh;
-  }
-
   body {
     max-width: 100vw;
   }
 
-  .grid-col-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-reversed :first-child {
-    order: 0; /*puts image first*/
-  }
-
-  .box-inner {
-    max-width: 90%;
-    max-height: auto;
+  .product-promos article {
+    min-width: 100vw;
+    height: 624px;
+    width: calc(50%-0.5em);
+    box-shadow: 4px 4px 6px black;
   }
 
   .toggler {

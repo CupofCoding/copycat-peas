@@ -152,23 +152,77 @@
   border-top: 1px gray solid;
 }
 
-#search-bar {
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  top: 0;
-  left: -100vw;
+.search-menu {
+  display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.drop-down-menu .search-bar-drop-down {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 44px;
+  width: 40vw;
+  left: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 0 20px;
+  padding-bottom: 18px;
+  border-radius: 0 0 14px 14px;
+}
+
+.drop-down-menu .search-bar-drop-down .drop-down-header {
+  padding-top: 23px;
+  padding-bottom: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #6e6e73;
+}
+
+.drop-down-menu .search-bar-drop-down a {
+  border: none;
+  width: 35vw;
+  padding: 0.6rem 14px;
+  font-size: 14px;
+  color: #1d1d1f;
+  margin: 0 14px;
+}
+
+.drop-down-menu .search-bar-drop-down a:hover {
+  background-color: #f5f5f7;
+  color: var(--chevy-link);
+}
+
+#search-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   max-height: 100vh;
   z-index: 5000;
-  overflow: hidden;
+  border: none;
+  box-shadow: none;
+}
+
+#search-bar form,
+#mobile-search-bar {
+  color: var(--text-color);
+  opacity: 0.6;
 }
 
 #search-bar input {
+  color: var(--text-color);
+  border-radius: 4px;
+  border: none;
   width: 40vw;
   max-width: 995px;
+  opacity: 0.6;
 }
 
 .submit-button {
@@ -204,6 +258,7 @@
 
 .corner-menu-top,
 .corner-menu-bottom {
+  display: flex;
   position: absolute;
   top: 25%;
   left: 0;
@@ -219,17 +274,17 @@
 }
 
 .open .corner-menu-top {
-  transform: rotate(45deg) translateY(6px) translateX(6px);
+  transform: rotate(45deg) translateY(4px) translateX(4px);
 }
 
 .open .corner-menu-bottom {
-  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  transform: rotate(-45deg) translateY(4px) translateX(-4px);
 }
 
-/* Mobile Menu */
-.hidden {
-  transform: translateY(0%); /*moves it from the right*/
-}
+/* Mobile Menu */ /*moves it from the top*/
+/* .hidden {
+  transform: translateY(calc(-100% - 44px));
+} */
 
 /* Caps the Navigation Bar
     .no-scroll {
@@ -237,11 +292,12 @@
     } */
 
 .mobile-menu {
-  position: fixed;
-  top: 45px;
+  position: absolute;
+  top: 44px;
   left: 0;
+  padding: 0px 40px 8px;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 44px);
   background-color: #1d1d1f;
   color: #f5f5f7;
   padding: 3em;
@@ -250,13 +306,32 @@
   transition: all 0.3s;
   z-index: 1000;
   border-radius: 0 0 0 0.5em;
-  opacity: 0.3;
+  opacity: 1;
+}
+
+#menu {
+  padding: 0 48px;
+  background-color: #000;
 }
 
 .mobile-menu ul {
   line-height: 3;
   padding-bottom: 10px;
-  margin-bottom: 30px;
+}
+
+#mobile-search-bar {
+  background-color: #6e6e73;
+  padding: 0 14px;
+  border-radius: 4px;
+  border-color: transparent;
+}
+
+#mobile-search-bar input {
+  border-color: transparent;
+  color: var(--text-color);
+  width: calc(100% - 36px);
+  background-color: #6e6e73;
+  padding: 0;
 }
 
 .mobile-nav-links-all li {
@@ -266,11 +341,13 @@
 ul .mobile-nav-search {
   margin: 0;
   padding-bottom: 12px;
+  position: relative;
 }
 
 .mobile-menu a {
   text-decoration: none;
   color: var(--text-color);
+  font-size: 17px;
   opacity: 0.8;
 }
 
@@ -279,47 +356,17 @@ ul .mobile-nav-search {
   text-decoration: none;
 }
 
-.mobile-menu div {
-  margin-top: 20px;
-}
-
 .mobile-menu div a {
   display: flex;
   align-items: center;
-  font-size: 16px;
-}
-
-.mobile-menu img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  font-size: 17px;
 }
 
 /*Contact Mobile */
-#menu > ul > div > li:nth-child(4) > div {
-  position: absolute;
-  left: 0;
-  margin-right: auto;
-  padding-left: 3em;
-}
-
-#menu > ul > div > li:nth-child(4) > div > button {
-  margin-left: 0;
-}
-
-.contact-form-mobile {
-  position: fixed;
-  width: 100vw;
-  height: 85vh;
-  left: 0;
-  margin-top: 0px;
-}
 
 @media (max-width: 375px) {
   .mobile-menu {
-    width: 100%;
-    background-color: #fff;
-    color: #000;
+    width: 100vw;
   }
 }
 

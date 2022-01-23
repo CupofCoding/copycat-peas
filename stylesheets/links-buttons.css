@@ -79,6 +79,10 @@ main .chevy button :not(sup),
 }
 
 /*Buttons*/
+button:focus {
+  outline: none;
+}
+
 .button-links {
   cursor: pointer;
   border: 0;
