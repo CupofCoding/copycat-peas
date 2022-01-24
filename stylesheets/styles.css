@@ -125,6 +125,11 @@ html {
   text-align: center;
   padding-bottom: 12px;
   margin-bottom: 0;
+  font-weight: 400;
+}
+
+.offers a {
+  text-decoration: none;
 }
 
 /* Box */

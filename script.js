@@ -7,14 +7,16 @@ function navToggle() {
     document.body.classList.toggle('no-scroll')
 }
 
-button.addEventListener('click', function() {
-    if(button.className != "open corner-menu"){
-        button.className = "open corner-menu";
-    }
-    else{
-        button.className = "corner-menu"
-    }
-})
+button.addEventListener('click', navToggle)
+
+// button.addEventListener('click', function() {
+//     if(button.className != "open corner-menu"){
+//         button.className = "open corner-menu";
+//     }
+//     else{
+//         button.className = "corner-menu"
+//     }
+// })
 
 document.addEventListener('click', e => {
     const isDropdownButton = e.target.matches("[data-drop-down-button]")

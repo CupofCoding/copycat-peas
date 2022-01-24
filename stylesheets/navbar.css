@@ -284,6 +284,7 @@
 /* Mobile Menu */ /*moves it from the top*/
 .hidden {
   transform: translateY(calc(-100% - 44px));
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
 /* Caps the Navigation Bar
