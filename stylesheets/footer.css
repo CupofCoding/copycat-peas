@@ -17,7 +17,9 @@ footer li,
 footer h4,
 footer .text-sm,
 .footer-grid a,
-#copyright a {
+#copyright a,
+.footer-grid-mobile a,
+.content {
   font-size: 12px;
   color: #6e6e73;
 }
@@ -65,7 +67,8 @@ footer .text-sm,
   justify-content: space-between;
 }
 
-.footer-grid {
+.footer-grid,
+.footer-grid-mobile {
   /* height: 500px; */
   margin: auto;
   padding: 20px 0 0;
@@ -80,11 +83,13 @@ footer .text-sm,
   font-size: 12px;
 }
 
-.footer-grid a {
+.footer-grid a,
+.footer-grid-mobile a {
   text-decoration: none;
 }
 
-.footer-grid li {
+.footer-grid li,
+.footer-grid-mobile li {
   text-decoration: none;
   line-height: 2.25em;
 }
@@ -127,6 +132,10 @@ footer .text-sm,
   margin: 0;
 }
 
+.footer-grid-mobile {
+  display: none;
+}
+
 @media (max-width: 375px) {
 }
 
@@ -140,6 +149,12 @@ footer .text-sm,
   }
 
   .footer-grid {
+    display: none;
+  }
+
+  .footer-grid-mobile {
+    display: inherit;
+    width: 100vw;
     grid-template-columns: 1fr;
     justify-items: center; /*affects column*/
     align-items: center; /*affects row*/
@@ -147,31 +162,42 @@ footer .text-sm,
     align-self: center;
   }
 
-  .footer-grid > * {
+  .footer-grid-mobile > * {
     grid-column: 1/2;
     grid-row: auto;
     width: 100%;
   }
 
-  .footer-grid > * h4 ::after {
-    content: "+";
-    float: right;
-    font-size: 14px;
-    font-weight: normal;
-    margin-top: -2px;
-    margin-right: 8px;
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
+  .footer-titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90vw;
+  }
+
+  * .footer-grid-mobile-1 {
+    display: hidden;
+  }
+
+  /* .footer-menu:active {
+    display: relative;
+  } */
+
+  /* .content {
+    display: inherit;
+  } */
+
+  .content :active {
+    transform: rotate(45deg);
     transition: transform 0.3s ease;
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   }
 
-  .footer-grid > * ul {
-    content: "+";
+  .footer-grid-mobile > * ul {
     line-height: 1.25;
   }
-
-  .footer-grid > * ul ::after {
+  /* 
+  .footer-grid > * :after {
     content: "+";
     float: right;
     font-size: 14px;
@@ -182,7 +208,7 @@ footer .text-sm,
     transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  }
+  } */
 
   .footer-grid > * li {
     padding: 6px 14px;
