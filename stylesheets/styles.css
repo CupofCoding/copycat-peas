@@ -220,7 +220,7 @@ html {
   min-width: 49%;
   height: 624px;
   width: calc(50%-0.5em);
-  box-shadow: 4px 4px 6px black;
+  /* box-shadow: 4px 4px 6px black; */
 }
 
 .product-promos article > * {
@@ -254,7 +254,7 @@ div[class^="text"],
 div[class*="text"],
 section[class*="text"] {
   color: var(--default-text);
-  text-shadow: 6px, 6px, black;
+  /* text-shadow: 6px, 6px, black; */
 }
 
 /* #about {

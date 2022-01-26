@@ -27,12 +27,12 @@
 
 .chevy a :not(.offers a),
 .chevy button :not(.offers a) {
-  text-shadow: 2px 2px 20px black;
+  /* text-shadow: 2px 2px 20px black; */
 }
 
 h1,
 h2 {
-  text-shadow: 1px 1px 30px gray;
+  /* text-shadow: 1px 1px 30px gray; */
   mix-blend-mode: multiply;
   background-color: white;
   color: black;
