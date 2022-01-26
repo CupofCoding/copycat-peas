@@ -367,6 +367,10 @@ button:hover {
     box-shadow: 4px 4px 6px black;
   }
 
+  .product-promos article button {
+    font-size: 19px;
+  }
+
   .toggler {
     display: auto;
   }

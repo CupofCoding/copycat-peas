@@ -9,6 +9,7 @@ function navToggle() {
 
 button.addEventListener('click', navToggle)
 
+
 // button.addEventListener('click', function() {
 //     if(button.className != "open corner-menu"){
 //         button.className = "open corner-menu";

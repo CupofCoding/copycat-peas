@@ -6,7 +6,7 @@
 }
 
 .product-1 {
-  background-image: url(https://images.unsplash.com/photo-1618558816330-43ae31b50c12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-image: url(https://images.unsplash.com/photo-1601972599720-36938d4ecd31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
 }
 
 .product-2 {
@@ -14,19 +14,24 @@
 }
 
 .product-3 {
-  background-image: url(https://images.unsplash.com/photo-1620838106329-38480e765006?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1077&q=80);
+  background-image: url(https://images.unsplash.com/photo-1601976864636-403ab1eea224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+.product-3 h3 {
+  color: orangered;
+  margin-bottom: 0.5em;
+  font-weight: 600;
 }
 
 .promo-1 {
-  background-image: url(https://images.unsplash.com/photo-1574340328716-7f09d58917d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80);
+  background-image: url(https://images.unsplash.com/photo-1566581184707-0ff96ae2f0bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
 }
 
 .promo-2 {
-  background-image: url(https://images.unsplash.com/photo-1551739440-5dd934d3a94a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80);
+  background-image: url(https://images.unsplash.com/photo-1557681619-aa3ab318509d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80);
 }
 
 .promo-3 {
-  background-image: url(https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80);
+  background-image: url(https://images.unsplash.com/photo-1598331668826-20cecc596b86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1636&q=80);
 }
 
 .promo-4 {
@@ -34,7 +39,7 @@
 }
 
 .promo-5 {
-  background-image: url(https://images.unsplash.com/photo-1609252925148-b0f1b515e111?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  background-image: url(https://images.unsplash.com/photo-1556742208-999815fca738?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80);
 }
 
 .promo-6 {
